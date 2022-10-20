@@ -60,9 +60,23 @@ form button {
   line-height: 1.7rem;
   color: #121212;
 
-  transition: filter 0.3s;
+  animation: btnHidden 1s;
 }
 
 form button:hover {
   filter: brightness(1.1);
+}
+
+@keyframes btnHidden {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }

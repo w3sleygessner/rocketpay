@@ -44,9 +44,25 @@ body {
   background: #202024;
   border: 0.1rem solid #323238;
   border-radius: 0.6rem;
+
+  transition: 1.5s;
+  animation-name: updown;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0, -0.17, 0.23, 1.8);
 }
 
 #app header {
   display: flex;
   align-items: center;
+}
+
+@keyframes updown {
+  0% {
+    opacity: 0;
+    transform: translateY(-422px);
+  }
+
+  20% {
+    opacity: 0.2;
+  }
 }
